@@ -1,0 +1,9 @@
+#Zainstalowanie środowiska conda
+conda create --name SRA_tools
+conda activate SRA_tools
+#Zainstalowanie narzędzia SRA-Toolkit
+conda install bioconda::sra-tools
+#Dalsza część zadania
+fastq-dump SRR25629155 --split-3 --skip-technical -gzip
+zcat SRR25629155_1.fastq.gz | head -n 10
+ID flowcellu: MNG003
