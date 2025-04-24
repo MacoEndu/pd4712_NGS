@@ -1,0 +1,6 @@
+#Kod fastqc
+fastqc -t 4 -o quality_report/ *.fastq.gz
+#Wygenerowane raporty
+SRR25629155_1_fastqc.html
+SRR25629155_2_fastqc.html
+
