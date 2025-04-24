@@ -1,0 +1,8 @@
+#Pobranie odpowiednich plików fastq
+fastq-dump SRR25629153  --split-3 --skip-technical -gzip
+fastq-dump SRR25629154  --split-3 --skip-technical -gzip
+fastq-dump SRR25629155  --split-3 --skip-technical -gzip
+#Wygenerowanie raportów
+fastqc -t 4 -o quality_report/ *.fastq.gz
+multiqc --fullnames .
+
