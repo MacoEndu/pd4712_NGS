@@ -1,0 +1,6 @@
+#Instalacja Trimmomatic w środowisku conda
+conda install -c bioconda trimmomatic
+#Przycinanie SRR25629155 za pomocą trimmomatic
+trimmomatic PE -threads 4 -phred33 SRR25629155_1.fastq.gz SRR25629155_2.fastq.gz SRR25629155_1_trimmed.fastq.gz /dev/null SRR25629155_2_trimmed.fastq.gz /dev/null LEADING:20 TRAILING:20 SLIDINGWINDOW:5:20 MINLEN:50
+#Generowanie raportu przyciętych plików
+fastqc -o quality_reports/ *trimmed*
