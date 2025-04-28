@@ -1,0 +1,14 @@
+#Instalacja Samtools
+sudo apt install samtools
+#Konwersja jednego pliku SAM -> BAM
+samtools view -bS Ecoli_rep1.sam > Ecoli_rep1.bam
+#Sortowanie jednego replikatu
+samtools sort Ecoli_rep1.bam -o Ecoli_rep1_sorted.bam
+#Indeksowanie jednego replikatu
+samtools index Ecoli_rep1_sorted.bam
+#Sprawdzenie wielkości wygenerowanych plików
+ls -hl
+#Przeprowadzenie mapowania pozostałych plików
+./mapping.sh
+#Przeprowadzanie konwersji, oznaczania i usuwania duplikatów wszystkich plików
+./fix_dub_del.sh
