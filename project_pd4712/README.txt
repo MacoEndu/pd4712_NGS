@@ -1,3 +1,7 @@
+**WAŻNE**
+```Te pliki z analizy są niepełne, dołącze wszystko w jak najszybszym czasie```
+
+
 Projekt: Analiza wariantów Wolbachia wMel (wMelCS_b, wMelOctoless, wMelPop) – dane BioProject: PRJNA587443
 
 wMelCS_b: SRR10438626
@@ -14,5 +18,3 @@ Dlaczego porównuję te odczyty?
 Porównanie odczytów sekwencjonowania dla  wMelOctoless, wMelPop oraz szczepu kontrolnego (np. wMelCS_b) pozwala:
 - zidentyfikować różnice strukturalne w genomie (np. delecje lub amplifikacje regionu Octomom),
 - powiązać zmiany genomowe z fenotypem nadmiernej proliferacji bakterii,
-
-Workflow analizy obejmuje: kontrolę jakości odczytów, trimming, mapowanie do genomu referencyjnego, wykrywanie zmian strukturalnych oraz interpretację biologiczną wyników.
