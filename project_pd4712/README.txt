@@ -1,5 +1,3 @@
-pd4712
-
 Projekt: Analiza wariantów Wolbachia wMel (wMelCS_b, wMelOctoless, wMelPop) – dane BioProject: PRJNA587443
 
 wMelCS_b: SRR10438626
