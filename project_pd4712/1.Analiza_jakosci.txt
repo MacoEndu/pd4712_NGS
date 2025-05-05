@@ -1,0 +1,25 @@
+#Analiza plików analizy z folderu raw_data_reports (.html pliki z raportami fastqc i multiqc)
+
+Analiza jakości surowych odczytów NGS dla szczepów Wolbachia:
+
+#1. Jakość odczytów
+Średni Phred Score: Wszystkie pozycje w odczytach mają średnią jakość >30 (zielony zakres), co odpowiada prawdopodobieństwu błędu 1 na 1000.
+
+#2. Długość odczytów
+Mediana długości:
+
+wMelPop: 301 bp (najdłuższe odczyty),
+
+Octoless i wMelCS_b: 250–251 bp.
+
+#3. Rozkład GC
+Średni % GC:
+
+wMelCS_b: 39%,
+
+Octoless i wMelPop: 37%.
+
+#4. Obecność adapterów
+Poziom adapterów: <0.5% we wszystkich próbkach.
+
+Dominujące sekwencje: Powtarzające się motywy (np. GAAGAGAAGAGA), które stanowią <0.5% wszystkich odczytów (prawdopodobnie artefakty PCR)
