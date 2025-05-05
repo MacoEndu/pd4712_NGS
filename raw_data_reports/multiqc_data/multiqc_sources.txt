@@ -1,0 +1,7 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	wMelPop_1	/home/wiktor/Pulpit/pd4712_NGS_Project/raw_data_reports/wMelPop_1_fastqc.zip
+FastQC	all_sections	wMelCS_b_1	/home/wiktor/Pulpit/pd4712_NGS_Project/raw_data_reports/wMelCS_b_1_fastqc.zip
+FastQC	all_sections	wMelPop_2	/home/wiktor/Pulpit/pd4712_NGS_Project/raw_data_reports/wMelPop_2_fastqc.zip
+FastQC	all_sections	wMelCS_b_2	/home/wiktor/Pulpit/pd4712_NGS_Project/raw_data_reports/wMelCS_b_2_fastqc.zip
+FastQC	all_sections	Octoless_1	/home/wiktor/Pulpit/pd4712_NGS_Project/raw_data_reports/Octoless_1_fastqc.zip
+FastQC	all_sections	Octoless_2	/home/wiktor/Pulpit/pd4712_NGS_Project/raw_data_reports/Octoless_2_fastqc.zip
