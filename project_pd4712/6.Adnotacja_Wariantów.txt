@@ -34,6 +34,6 @@ Przedstawione delecje i insercje są w regionie Octomom, który odpowiada za zwi
 Wizualizacja za pomocą IGV przedstawiono już w pliku "4.Porownanie_wariantow_IGV.png". 
 
 Komentarz do wyników:
-Widać dobrze delecje regionu Octomom w porównaniu do wMelCS_b (1 kopia regionu) i wMelPop (wiele kopii regionu). Ciężej jest zidentyfikować wielokrotne powtórzenia regionu Octomom w próbce wMePop, ale mam nadzieję, że analiza wariantów pokaże więcej indeli w tej próbce. Region Ocotom ma w większości MAPQ 60, co świadczy o dobrym zmapowaniu. Regionu flankujące region Octomom są MAPQ 0. Region Octomom w genomie Wolbachia jest otoczony bezpośrednimi powtórzeniami (RT repeats). Te powtarzające się sekwencje prowadzą do niejednoznacznego mapowania odczytów – odczyty mogą pasować do wielu lokalizacji w genomie.
+Widać dobrze delecje regionu Octomom w porównaniu do wMelCS_b (1 kopia regionu) i wMelPop (wiele kopii regionu). Region Ocotom ma w większości MAPQ 60, co świadczy o dobrym zmapowaniu. Regionu flankujące region Octomom są MAPQ 0. Region Octomom w genomie Wolbachia jest otoczony bezpośrednimi powtórzeniami (RT repeats). Te powtarzające się sekwencje prowadzą do niejednoznacznego mapowania odczytów – odczyty mogą pasować do wielu lokalizacji w genomie.
 
 
