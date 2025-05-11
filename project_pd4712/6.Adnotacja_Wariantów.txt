@@ -1,0 +1,39 @@
+#Adnotacja do wariantów za pomocą programu SnpEff w GALAXY.
+
+
+#1. Przygotowanie przefiltrowanych wariantów:
+bgzip -c wMelPop_final_filtered_variants.vcf > SnpEff_analysis/wMelPop_final_filtered_variant.vcf.gz
+bgzip -c Octoless_final_filtered_variants.vcf > SnpEff_analysis/Octoless_final_filtered_variant.vcf.gz
+bgzip -c wMelCS_b_final_filtered_variants.vcf > SnpEff_analysis/wMelCS_b_final_filtered_variant.vcf.gz
+
+bcftools index SnpEff_analysis/Octoless_final_filtered_variant.vcf.gz 
+bcftools index SnpEff_analysis/wMelPop_final_filtered_variant.vcf.gz 
+bcftools index SnpEff_analysis/wMelCS_b_final_filtered_variant.vcf.gz 
+
+bcftools merge wMelCS_b_final_filtered_variant.vcf.gz Octoless_final_filtered_variant.vcf.gz wMelPop_final_filtered_variant.vcf.gz -o Wolbachia_wariants_merged.vcf -O v
+
+#2. Analiza w GALAXY za pomocą narzędzia SnpEff 
+
+Pobranie odpowiedniej database z adnotacjami dla Wolbachia:
+    Wykorzystano w GALAXY narzędzie SnpEff databases, aby wyszukać bazę dla Wolbachia
+    Znaleziono jedynie bazę dla Wolbachia_pipentis
+    
+
+Poddano analizie SnpEff eff- annotate variants:
+
+Zaimportowano plik zmergowany.
+Wykorzystano opcję Download on demand dla bazy adnotacji i wpisano nazwę: Wolbachia_pipentis
+
+Pobrano i zanalizowano plik: SnpEff_eff_Wolbachia_variants.html
+
+Komentarz do wyników:
+Plik pokazuje 171 błędów, więc coś poszło nie tak z analizą. Próbowałem z innymi bazami adnotacji dla Wolbachia_pipentis, ale nie dawało to żadnego efektu. Możliwe, że to przez to że nie wybrałem dokładnie takiej samej bazy adnotacji jak genomu referencyjnego. Próba utworzenia bazy danych z genbanku również pokazywała errory w narzędziach GALAXY. Analiza przynajmniej pokazuje występowanie snp (155), insercji (7) i delecji (9) względem genomu Wolbachia_pipentis. 
+
+Przedstawione delecje i insercje są w regionie Octomom, który odpowiada za zwiększoną amplifikację bakterii, jeśli tego regionu występuje większa niż >1 ilość lub 0 kopii.
+
+Wizualizacja za pomocą IGV przedstawiono już w pliku "4.Porownanie_wariantow_IGV.png". 
+
+Komentarz do wyników:
+Widać dobrze delecje regionu Octomom w porównaniu do wMelCS_b (1 kopia regionu) i wMelPop (wiele kopii regionu). Ciężej jest zidentyfikować wielokrotne powtórzenia regionu Octomom w próbce wMePop, ale mam nadzieję, że analiza wariantów pokaże więcej indeli w tej próbce. Region Ocotom ma w większości MAPQ 60, co świadczy o dobrym zmapowaniu. Regionu flankujące region Octomom są MAPQ 0. Region Octomom w genomie Wolbachia jest otoczony bezpośrednimi powtórzeniami (RT repeats). Te powtarzające się sekwencje prowadzą do niejednoznacznego mapowania odczytów – odczyty mogą pasować do wielu lokalizacji w genomie.
+
+

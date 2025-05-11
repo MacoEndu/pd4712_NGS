@@ -1,0 +1,41 @@
+Genom referencyjny bakterii Wolbachia (wMel):
+https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_016584425.1/
+
+1. Pobrano plik z podstrony FTS: z rozszerzeniem .fna.gz (zmieniono nazwę na Wolbachia_wMel_reference_genome i zindeksowano w folderze genome_index komendą:
+
+bwa index Wolbachia_wMel_reference_genome
+
+2. Zmapowanie wszystkich odczytów (tj wMelCS_b_trimmed_1/2, wMelPop_trimmed_1/2, Octoless_1/2
+
+Skrypt Mapping.sh
+
+3. Analiza zmapowania za pomocą komend samtools
+
+PROCENT ZMAPOWANYCH ODCZYTÓW:
+samtools flagstat mapped/Wolbachia_wMelCS_b_fixed_sorted_dedup.bam | awk 'NR==7'
+samtools flagstat mapped/Wolbachia_wMelPop.bam_fixed_sorted_dedup.bam | awk 'NR==7'
+samtools flagstat mapped/Wolbachia_Octoless_fixed_sorted_dedup.bam.bam | awk 'NR==7'
+
+WYNIK DLA wMelCS_b (kontrola): 93095 + 0 mapped (16.53% : N/A)
+WYNIK DLA wMelPop: 11274774 + 0 mapped (47.49% : N/A)
+WYNIK DLA wMelOctoless: 1361695 + 0 mapped (77.71% : N/A)
+
+#Komentarz do wyników:
+Wyniki ilości zmapowanych wyników do genomu referencyjnego mogą nie być >90%, ponieważ oprócz DNA bakterii endosymbiotycznej Wolbachia, występuje również materiał genetyczny organizmu host'a tj. Drosophilia melanogaster. Zalecane byłoby wcześniejsze usuniecie sekwencji hosta i późniejsza analiza (nie wykonano w tym projekcie już :( ). Jednak te wyniki sugerują już literaturową zależność pomiedzy posiadaniem wielu kopii lub braku kopii regionu genomowego Octomom u Wolbachii (wMelOctoless, wMelPop), a jej zwielokrotnioną amplifikacją w organizmie host'a. wMelCS_b posiada tylko jedną kopię tego regionu genomowego, dlatego jest ilość zmapowanych regionów do ref Wolbachii najmniejsza w powyższych próbkach.
+
+POKRYCIE I ŚREDNIA GŁĘBOKOŚĆ WYNIKÓW:
+samtools coverage mapped/Wolbachia_wMelPop_fixed_sorted_dedup.bam
+samtools coverage mapped/Wolbachia_wMelCS_b_fixed_sorted_dedup.bam
+samtools coverage mapped/Wolbachia_Octoless_fixed_sorted_dedup.bam
+
+
+| Próbka                | Pokrycie (%) | Średnia głębokość (meandepth) |
+|-----------------------|--------------|-------------------------------|
+| wMelPop               | 99.9992      | 233.3                         |
+| wMelCS_b              | 99.9929      | 32.8                          |
+| Octoless              | 98.5098      | 246.0                         |
+	
+#Komentarz do wyników:
+Pokrycie we wszystkich próbkach jest wysokie (>98%). Średnia głębokość jest w każdej próbce wysoka, poza próbkoą wMelCS_b (<35x). Pokazuje to znowu, że warianty wMelPop i wMelOctoless występują w większej ilości na pojedynczą próbkę biologiczną. Wszystkie próbki nadają się na warianty germinalne (WGS) [>30x].
+	
+

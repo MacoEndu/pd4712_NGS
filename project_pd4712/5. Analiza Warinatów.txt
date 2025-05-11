@@ -1,0 +1,30 @@
+#Analiza wariantów i wstępna filtracja
+
+WARIANTY PRÓBEK:
+Ilość SNP w próbce wMelCS_b:	            147
+Ilość INDELi w próbce wMelCS_b:	            16
+Ilość SNP w próbce Octoless:	            147
+Ilość INDELi w próbce Octoless:	            16
+Ilość SNP w próbce wMelPop:	                147
+Ilość INDELi w próbce wMelPop:	            14
+
+#Warunki filtracji
+-e 'QUAL < 30 || DP < 25 '
+
+#Komentarz uzasadniający taką filtracje
+Wybrano takie warunki, aby wybrać najbardziej wiarygodne warianty i dodatkowo nie wykluczać próbki wMelCS_b, która miała najmniejszą głębokość sekwencjonowania (~30x)
+
+
+WARIANTY FILTROWANYCH PRÓBEK:
+Ilość SNP w próbce wMelCS_b_filtered:	    108
+Ilość INDELi w próbce wMelCS_b_filtered:	10
+Ilość SNP w próbce Octoless_filtered:	    143
+Ilość INDELi w próbce Octoless_filtered:	14
+Ilość SNP w próbce wMelPop_filtered:	    146
+Ilość INDELi w próbce wMelPop_filtered:	    14
+
+#Komentarz do wyników:
+
+Filtracja zmniejszyła trochę ilość wariantów. Pozostałe warianty mają wysoką jakość tj. odczyty >30 phred i >25 głębokości sekwencjonowania. 
+
+

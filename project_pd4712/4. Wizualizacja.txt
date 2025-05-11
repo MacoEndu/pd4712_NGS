@@ -1,0 +1,17 @@
+#Wizualizacja wyników w IGV
+
+1. Zindeksowanie wszystkich odczytów
+samtools index Wolbachia_Octoless_fixed_sorted_dedup.bam 
+samtools index Wolbachia_wMelPop_fixed_sorted_dedup.bam 
+samtools index Wolbachia_wMelCS_b_fixed_sorted_dedup.bam
+
+2. Przygotowanie genomu referencyjnego
+samtools faidx Wolbachia_wMel_ref_genome.fna
+(otrzymano plik .fna.fai)
+
+3. Wizualizacja regionu Octomom za pomocą programu IGV
+igv
+Plik '4. Porownanie_wariantow_IGV.png'
+
+Komentarz do wyników:
+Widać dobrze delecje regionu Octomom w porównaniu do wMelCS_b (1 kopia regionu) i wMelPop (wiele kopii regionu). Ciężej jest zidentyfikować wielokrotne powtórzenia regionu Octomom w próbce wMePop, ale mam nadzieję, że analiza wariantów pokaże więcej indeli w tej próbce. Region Ocotom ma w większości MAPQ 60, co świadczy o dobrym zmapowaniu. Regionu flankujące region Octomom są MAPQ 0. Region Octomom w genomie Wolbachia jest otoczony bezpośrednimi powtórzeniami (RT repeats). Te powtarzające się sekwencje prowadzą do niejednoznacznego mapowania odczytów – odczyty mogą pasować do wielu lokalizacji w genomie.

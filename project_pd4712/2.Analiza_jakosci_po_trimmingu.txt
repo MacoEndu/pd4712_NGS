@@ -1,0 +1,24 @@
+Jest to trimming odczytów i usunięcie adapteórw za pomoąc Trimmomatic.
+Potrzebne będą surowe dane SRA z badancyh próbek i plik TruSeq3-PE.fa z sekwencjami adapterów Illuminy do wykonania tego probramu ./2.Trimming 
+Pobranie pliku TrueSeq3-PE.fa
+wget https://raw.githubusercontent.com/usadellab/Trimmomatic/main/adapters/TruSeq3-PE.fa
+
+#Analiza plików analizy z folderu trimmed_data_reports (.html pliki z raportami fastqc i multiqc)
+
+#1. Jakość odczytów
+Średni Phred Score: Wszystkie pozycje w odczytach mają dalej średnią jakość >30 (zielony zakres), co odpowiada prawdopodobieństwu błędu 1 na 1000.
+
+#2. Długość odczytów
+Mediana długości:
+
+Dla wszystkich próbek: wMelCS_b, wMelOctoless, wMelPop mediana odczytu uśredniła się w zakresie ~217-247 pz (typowe dla Illuminy)
+
+#3. Rozkład GC
+
+Zawartość GC: 37-38%- zgadza się to dla próbek zawierających bakterie. 
+
+#4. Obecność adapterów
+Poziom adapterów: <0.5% we wszystkich próbkach. Usunięcie adapterów ułdao się
+
+
+

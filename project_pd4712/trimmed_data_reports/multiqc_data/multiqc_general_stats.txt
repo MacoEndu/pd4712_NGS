@@ -1,0 +1,7 @@
+Sample	FastQC_mqc-generalstats-fastqc-percent_duplicates	FastQC_mqc-generalstats-fastqc-percent_gc	FastQC_mqc-generalstats-fastqc-avg_sequence_length	FastQC_mqc-generalstats-fastqc-median_sequence_length	FastQC_mqc-generalstats-fastqc-percent_fails	FastQC_mqc-generalstats-fastqc-total_sequences
+Octoless_1	33.98509138058665	37.0	231.83541309072035	247	20.0	897781.0
+Octoless_2	32.99689492284196	37.0	223.86158762548996	247	20.0	897781.0
+wMelCS_b_1	12.897222050080032	38.0	214.40671144049705	247	20.0	604222.0
+wMelCS_b_2	12.751048816741957	38.0	205.75286566857878	232	10.0	604222.0
+wMelPop_1	26.920322018220702	37.0	235.87395815732214	257	20.0	1449955.0
+wMelPop_2	25.979487139910134	36.0	207.73573179857306	217	20.0	1449955.0

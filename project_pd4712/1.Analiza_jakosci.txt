@@ -14,12 +14,8 @@ Octoless i wMelCS_b: 250–251 bp.
 
 #3. Rozkład GC
 Średni % GC:
-
 wMelCS_b: 39%,
-
 Octoless i wMelPop: 37%.
 
 #4. Obecność adapterów
-Poziom adapterów: <0.5% we wszystkich próbkach.
-
-Dominujące sekwencje: Powtarzające się motywy (np. GAAGAGAAGAGA), które stanowią <0.5% wszystkich odczytów (prawdopodobnie artefakty PCR)
+Poziom adapterów: ~1% dla niektórych próbek, wymaga to przycięcia adapterów.
